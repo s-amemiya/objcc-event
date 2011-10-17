@@ -51,10 +51,10 @@ struct Event<Arg1Type, Arg2Type, void> : public EventBase<void(^)(Arg1Type, Arg2
 template <class Arg1Type>
 struct Event<Arg1Type, void, void> : public EventBase<void(^)(Arg1Type)>
 {
-	void operator()(const Arg1Type& t) const
+	void operator()(const Arg1Type& arg1) const
 	{
 		BOOST_FOREACH (void(^block)(Arg1Type), this->blocks_) {
-			block(t);
+			block(arg1);
 		}
 	}
 };
