@@ -18,8 +18,8 @@ public:
 	void operator-=(BlockType block)
 	{
 		blocks_.erase(
-					  std::remove(blocks_.begin(), blocks_.end(), block),
-					  blocks_.end());
+			std::remove(blocks_.begin(), blocks_.end(), block),
+			blocks_.end());
 	}
 	
 protected:
