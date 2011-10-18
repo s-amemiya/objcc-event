@@ -6,11 +6,7 @@
 
 using namespace std;
 
-@interface MyClass : NSObject {
-	Event<> _arg0Event;
-	Event<NSString *> _arg1Event;
-	Event<int, int> _arg2Event;
-}
+@interface MyClass : NSObject
 @property (nonatomic, readonly) Event<>& arg0Event;
 @property (nonatomic, readonly) Event<NSString *>& arg1Event;
 @property (nonatomic, readonly) Event<int, int>& arg2Event;
